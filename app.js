@@ -471,7 +471,7 @@ function Rocks()
      {   
 
      	rocks.splice(index,1);
-     	if(this.r>40)
+     	if(this.r>50)
      	{
      	this.divide=true;
      	if(this.rdx>0)
