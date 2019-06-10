@@ -2,7 +2,7 @@
 var canvas=document.querySelector("canvas");
 var c=canvas.getContext("2d");
 canvas.height=window.innerHeight;
-canvas.width=window.innerWidth/2;
+canvas.width=window.innerWidth;
 var bgsound=document.querySelector("#bgsound");
 var canvasgame=document.querySelector("#game");
 var display1=document.querySelector("#display1");
@@ -468,8 +468,11 @@ function Rocks()
 
 	}
 	if(this.life<0 &&!this.divide)
-     {
+     {   
+
      	rocks.splice(index,1);
+     	if(this.r>40)
+     	{
      	this.divide=true;
      	if(this.rdx>0)
         {newrocks.push(new Divrocks(this.x-this.r/2,this.y,this.r/2,-this.rdx));
@@ -480,7 +483,7 @@ function Rocks()
           newrocks.push(new Divrocks(this.x-this.r/2,this.y,this.r/2,this.rdx));
         newrocks.push(new Divrocks(this.x+this.r/2,this.y,this.r/2,-this.rdx));	
         }
-     }
+     }}
     	
     	if(this.pos&&this.x-this.r>0)
 

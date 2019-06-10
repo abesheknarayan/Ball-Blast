@@ -1,9 +1,11 @@
 body{
  background-color:#c68c53 ;
  background-size: cover;
+ margin:0;
+ padding: 0;
 }
 canvas{
-	margin-left: 450px;
+	
 	background:url(b1.jpg); ;
 	background-size: cover;
 	font-family: 'Fredoka One', cursive;
